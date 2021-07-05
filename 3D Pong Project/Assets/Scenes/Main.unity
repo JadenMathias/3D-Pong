@@ -230,6 +230,8 @@ GameObject:
   - component: {fileID: 310024386}
   - component: {fileID: 310024385}
   - component: {fileID: 310024384}
+  - component: {fileID: 310024389}
+  - component: {fileID: 310024388}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -244,7 +246,7 @@ SphereCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 310024383}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 78ab9da57e98b6542af584162cb81782, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -269,7 +271,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e7b0a03be06d01141adafa8332c7ac0c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -313,6 +315,36 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310024388
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310024383}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8d0fd65b03b4ca4aacd63fe26741119, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rbBall: {fileID: 310024389}
+  velocity: 400
+--- !u!54 &310024389
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310024383}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &393739007
 GameObject:
   m_ObjectHideFlags: 0
@@ -424,7 +456,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 120
   m_CollisionDetection: 0
 --- !u!114 &393739013
 MonoBehaviour:
@@ -438,7 +470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a559e126e1648174e87bb0a25b7e64f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementForce: 50
+  movementForce: 100
   rb: {fileID: 393739012}
 --- !u!1 &705507993
 GameObject:
@@ -738,6 +770,8 @@ GameObject:
   - component: {fileID: 1098787931}
   - component: {fileID: 1098787930}
   - component: {fileID: 1098787929}
+  - component: {fileID: 1098787933}
+  - component: {fileID: 1098787934}
   m_Layer: 0
   m_Name: Bot
   m_TagString: Untagged
@@ -752,7 +786,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098787928}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 78ab9da57e98b6542af584162cb81782, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -815,12 +849,41 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1098787928}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 11.25, z: 8.07}
+  m_LocalPosition: {x: 0, y: 10.5, z: 8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1098787933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098787928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebc6d68f49cffe145b6a1ae6df55d593, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ball: {fileID: 310024387}
+--- !u!54 &1098787934
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1098787928}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
 --- !u!1 &1181215804
 GameObject:
   m_ObjectHideFlags: 0
