@@ -10,7 +10,7 @@ Material:
   m_Name: BotMaterial
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 2
+  m_LightmapFlags: 1
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
@@ -74,5 +74,5 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.03116761, g: 0.73918104, b: 0.9716981, a: 1}
-    - _EmissionColor: {r: 0.7169812, g: 0, b: 0.5046809, a: 1}
+    - _EmissionColor: {r: 1.4564853, g: 0.17247853, b: 0.13414995, a: 1}
   m_BuildTextureStacks: []
