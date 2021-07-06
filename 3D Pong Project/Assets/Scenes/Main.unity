@@ -328,7 +328,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rbBall: {fileID: 310024389}
-  velocity: 150
+  velocity: 200
   flag: 1
 --- !u!54 &310024389
 Rigidbody:
@@ -360,6 +360,7 @@ GameObject:
   - component: {fileID: 393739008}
   - component: {fileID: 393739012}
   - component: {fileID: 393739013}
+  - component: {fileID: 393739014}
   m_Layer: 0
   m_Name: Player1
   m_TagString: Untagged
@@ -437,7 +438,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393739007}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: -7}
+  m_LocalPosition: {x: 0.1, y: 9.1, z: -7}
   m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -466,13 +467,30 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 393739007}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a559e126e1648174e87bb0a25b7e64f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   movementForce: 100
   rb: {fileID: 393739012}
+--- !u!114 &393739014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393739007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d36aea3561ce5479b23ae1b74958ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainCamera: {fileID: 963194227}
+  region:
+    serializedVersion: 2
+    m_Bits: 64
+  player: {fileID: 393739012}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,7 +662,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 13.12, z: -13.97}
+  m_LocalPosition: {x: 0, y: 9.74, z: -28.09}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -657,7 +675,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9df3eab381e0e4743b831884b251f71c, type: 3}
   m_Name: 
@@ -957,7 +975,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1181215804}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 20, z: 0}
+  m_LocalPosition: {x: 0, y: 20.5, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1165,7 +1183,7 @@ GameObject:
   - component: {fileID: 2070896260}
   - component: {fileID: 2070896259}
   - component: {fileID: 2070896258}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: PlayerWall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
