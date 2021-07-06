@@ -5,6 +5,7 @@ using UnityEngine;
 public class botMovement : MonoBehaviour
 {
     public Transform ball;
+    public Rigidbody rbBall;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +15,9 @@ public class botMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector3.Dot(ball.position, new Vector3(0,0,1))>0)
+        if (rbBall.velocity.z>0)
         {
         transform.position = Vector3.Scale(ball.position, new Vector3(1,1,0)) + new Vector3(0,0,8);
         }
-        
     }
 }

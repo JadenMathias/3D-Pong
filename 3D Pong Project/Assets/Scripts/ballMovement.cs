@@ -6,7 +6,7 @@ public class ballMovement : MonoBehaviour
 {
     public Rigidbody rbBall;
     public float velocity;
-    public int flag = 1;
+
 
     // Start is called before the first frame update
     public void Start()
@@ -26,38 +26,39 @@ public class ballMovement : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Vector3.Dot(transform.position, new Vector3(0,0,1))==0)
+        if (Mathf.Floor(Mathf.Abs(transform.position.z)) == 0)
         {
-            if (flag % 2 ==0)
+            
+
+            if (rbBall.velocity.z > 0)
             {
-                rbBall.velocity = rbBall.velocity + new Vector3(0,0,0.001f);                
+                rbBall.velocity = rbBall.velocity + new Vector3(0.005f,0.005f,0.005f);                
             }
             else
             {
-                rbBall.velocity = rbBall.velocity + new Vector3(0,0,-0.001f);                
+                rbBall.velocity = rbBall.velocity + new Vector3(0.005f,0.005f,-0.005f);                
             }
-
-            flag=flag+1;
             
         }
 
         if (Mathf.Abs(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1))) < 3)
         {
-           if(Mathf.Abs(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1))) == 0)
+           /*if(Mathf.Abs(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1))) == 0)
            {
-               if (flag % 2 ==0)
+               if (rbBall.velocity.z > 0)
                 {
                 rbBall.velocity = Vector3.Scale(rbBall.velocity, new Vector3(1,1,0)) + new Vector3(0,0,4);
-                             }
+                }
                 else
                 {
                 rbBall.velocity = Vector3.Scale(rbBall.velocity, new Vector3(1,1,0)) + new Vector3(0,0,-4);
                 }
-           }
+           }*/
            //rbBall.velocity = rbBall.velocity + new Vector3(0,0,5); 
            rbBall.velocity = Vector3.Scale(rbBall.velocity,new Vector3(1,1,2f));
         }
         Debug.Log(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1)));
+    
     }
     
     
