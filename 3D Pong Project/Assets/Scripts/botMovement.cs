@@ -9,7 +9,7 @@ public class botMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        transform.position = new Vector3(0,10,8);
+        transform.position = new Vector3(0,10,8.5f);
     }
 
     // Update is called once per frame
@@ -17,7 +17,7 @@ public class botMovement : MonoBehaviour
     {
         if (rbBall.velocity.z>0)
         {
-        transform.position = Vector3.Scale(ball.position, new Vector3(1,1,0)) + new Vector3(0,0,8);
+        transform.position = Vector3.Scale(ball.position, new Vector3(1,1,0)) + new Vector3(0,0,8.5f);
         }
     }
 }
