@@ -7,6 +7,8 @@ public class ScoreUpdate : MonoBehaviour
     public Text highscoreText;
     public int score = 0;
     public int highscore=0;
+    
+
 
 
     // Start is called before the first frame update
@@ -26,6 +28,9 @@ public class ScoreUpdate : MonoBehaviour
             }
             score = 0;
             UpdateScore();
+            FindObjectOfType<ballMovement>().initializeMovement();
+            FindObjectOfType<stripMovement>().resetPosition();
+            
             
         }
         if(collision.collider.name == "Player1")

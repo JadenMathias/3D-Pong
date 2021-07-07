@@ -9,9 +9,9 @@ public class stripMovement : MonoBehaviour
     public Transform ball;
     public Rigidbody rbBall;
 
-    void Start()
+    public void resetPosition()
     {
-        
+        transform.position = Vector3.Scale(transform.position,new Vector3(1,1,0)) + Vector3.Scale(new Vector3(0,0,1),ball.position);
     }
 
     void FixedUpdate()

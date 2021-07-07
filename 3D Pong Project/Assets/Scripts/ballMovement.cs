@@ -7,17 +7,17 @@ public class ballMovement : MonoBehaviour
     public Rigidbody rbBall;
     public float velocity;
 
-
     // Start is called before the first frame update
     public void Start()
     {
-        transform.position = new Vector3(0,10,0);
-        rbBall.velocity = new Vector3(0,0,0);
         initializeMovement();
     }
 
     public void initializeMovement()
     {
+        FindObjectOfType<freezeTime>().freeze();
+        transform.position = new Vector3(0,10,0);
+        rbBall.velocity = new Vector3(0,0,0);
         float xRand = Random.value < 0.5 ? -1.0f : 1.0f;
         float yRand = Random.value < 0.5 ? -1.0f : 1.0f;
         float zRand = Random.value < 0.5 ? -1.0f : 1.0f;
