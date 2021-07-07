@@ -40,7 +40,7 @@ public class playerMovement : MonoBehaviour
     void Start()
     {
     }
-    void Update()
+    void FixedUpdate()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit raycastHit,float.MaxValue,region))

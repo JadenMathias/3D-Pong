@@ -48,7 +48,7 @@ public class ballMovement : MonoBehaviour
            
            rbBall.velocity = Vector3.Scale(rbBall.velocity,new Vector3(1,1,2f));
         }
-        Debug.Log(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1)));
+        //Debug.Log(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1)));
     
     }
     
