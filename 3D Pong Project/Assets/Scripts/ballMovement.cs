@@ -51,15 +51,6 @@ public class ballMovement : MonoBehaviour
         Debug.Log(Vector3.Dot(rbBall.velocity,new Vector3(0,0,1)));
     
     }
-
-    void OnCollisionEnter(Collision collision)
-    {
-        if(collision.collider.name == "PlayerWall")
-        {
-            Start();
-        }
-        
-    }
     
     
 }
