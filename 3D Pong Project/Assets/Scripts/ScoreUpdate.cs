@@ -37,9 +37,35 @@ public class ScoreUpdate : MonoBehaviour
         {
             score ++ ;
             UpdateScore();
+
+            if (score % 5==0 && score% 10 != 0 && score!=0)
+            {
+                FindObjectOfType<AudioManager>().Play("sheesh");
+
+            }
+
+            if (score%10 == 0 && score!=0)
+            {
+                FindObjectOfType<AudioManager>().Play("sheesh2");
+
+            }
         }
 
+        
+
+
     }
+
+    void GodMode()
+    {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            score++;
+            UpdateScore();
+        }
+    }
+    
+
 
     void UpdateScore()
     {

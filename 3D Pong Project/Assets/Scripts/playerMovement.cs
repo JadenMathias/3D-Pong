@@ -34,7 +34,6 @@ public class playerMovement : MonoBehaviour
             }
         
         }
-        
         return v;
     }
     void Start()
