@@ -6,11 +6,8 @@ public class ScoreUpdate : MonoBehaviour
     public Text scoreText;
     public Text highscoreText;
     public int score = 0;
-    public int highscore=0;
-    public BallCollisionSounds bcs;    
+    public int highscore = 0;
 
-
-    // Start is called before the first frame update
     void Start()
     {
         scoreText.text="Score: " + score.ToString();
@@ -30,34 +27,13 @@ public class ScoreUpdate : MonoBehaviour
             FindObjectOfType<ballMovement>().initializeMovement();
             FindObjectOfType<stripMovement>().resetPosition();
             
-            
         }
         if(collision.collider.name == "Player1")
         {
             score ++ ;
             UpdateScore();
 
-            if (score % 5==0 && score% 10 != 0 && score!=0)
-            {
-                if(bcs.devSounds)
-                {
-                FindObjectOfType<AudioManager>().Play("sheesh");
-                }
-
-            }
-
-            if (score%10 == 0 && score!=0)
-            {
-                if(bcs.devSounds)
-                {
-                FindObjectOfType<AudioManager>().Play("sheesh2");
-                }
-
-            }
         }
-
-        
-
 
     }
 
@@ -74,7 +50,6 @@ public class ScoreUpdate : MonoBehaviour
 
     void UpdateScore()
     {
-         scoreText.text ="Score: " + score.ToString();
-         
+         scoreText.text ="Score: " + score.ToString();   
     }
 }

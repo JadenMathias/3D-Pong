@@ -17,8 +17,7 @@ public class botMovement : MonoBehaviour
 
         //makes the bot move toward the xy position of the ball
         if (rbBall.velocity.z>0)
-        {
         transform.position = Vector3.MoveTowards(transform.position,x,difficulty);
-        }
+    
     }
 }

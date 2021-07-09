@@ -13,12 +13,23 @@ public class levelTransition : MonoBehaviour
     {
         Invoke("quitGame",0.2f);
     }
-    public void joinGame()
+    void joinGame()
     {
         SceneManager.LoadScene("Game");
     }
-    public void quitGame()
+    void quitGame()
     {
         Application.Quit();
     }
+
+    public void backtoMenu()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+
+    public void loadMultiplayer()
+    {
+        SceneManager.LoadScene("Loading");
+    }
+
 }

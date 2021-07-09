@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class sceneManage : MonoBehaviour
+public class pauseManage : MonoBehaviour
 
 
 
@@ -48,9 +48,4 @@ public class sceneManage : MonoBehaviour
         Time.timeScale = 1;
     }
 
-    void backtoMenu()
-    {
-        SceneManager.LoadScene("Menu");
-    }
-    
 }

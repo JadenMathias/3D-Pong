@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class playerMovement : MonoBehaviour
 {
@@ -38,13 +39,14 @@ public class playerMovement : MonoBehaviour
     }
     void Start()
     {
+        
     }
     void FixedUpdate()
     {
         Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out RaycastHit raycastHit,float.MaxValue,region))
-        {
             transform.position = limitPoint(Vector3.Scale(raycastHit.point,new Vector3(1,1,0)) + new Vector3(0,0,-8.5f));
-        }
+            
+        
     }
 }
