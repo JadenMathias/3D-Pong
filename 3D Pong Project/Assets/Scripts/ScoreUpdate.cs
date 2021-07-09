@@ -7,8 +7,7 @@ public class ScoreUpdate : MonoBehaviour
     public Text highscoreText;
     public int score = 0;
     public int highscore=0;
-    
-
+    public BallCollisionSounds bcs;    
 
 
     // Start is called before the first frame update
@@ -40,13 +39,19 @@ public class ScoreUpdate : MonoBehaviour
 
             if (score % 5==0 && score% 10 != 0 && score!=0)
             {
+                if(bcs.devSounds)
+                {
                 FindObjectOfType<AudioManager>().Play("sheesh");
+                }
 
             }
 
             if (score%10 == 0 && score!=0)
             {
+                if(bcs.devSounds)
+                {
                 FindObjectOfType<AudioManager>().Play("sheesh2");
+                }
 
             }
         }
