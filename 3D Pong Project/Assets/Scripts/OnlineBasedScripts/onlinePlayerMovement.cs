@@ -43,6 +43,17 @@ public class onlinePlayerMovement : MonoBehaviour
     {
         view = GetComponent<PhotonView>();
         mainCamera = FindObjectOfType<Camera>();
+        if(view.IsMine)
+        {
+            if (transform.position.z < 0)
+            mainCamera.transform.position = new Vector3(0,10,-28);
+            else
+            {
+                zfactor = 8.5f;
+                mainCamera.transform.position = new Vector3(0,10,28);
+                mainCamera.transform.rotation = new Quaternion(0,180,0,1);
+            }
+        }
         
             
     }
@@ -50,8 +61,6 @@ public class onlinePlayerMovement : MonoBehaviour
     {
         if(view.IsMine)
         {   
-            if (mainCamera.transform.position.z > 0)
-              zfactor = 8.5f;
             Ray ray = mainCamera.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out RaycastHit raycastHit,float.MaxValue,region))
                 transform.position = limitPoint(Vector3.Scale(raycastHit.point,new Vector3(1,1,0)) + new Vector3(0,0,zfactor));    
