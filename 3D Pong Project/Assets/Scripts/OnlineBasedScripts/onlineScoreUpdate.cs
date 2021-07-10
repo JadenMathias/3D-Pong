@@ -11,6 +11,7 @@ public class onlineScoreUpdate : MonoBehaviour
     public int score2 = 0;
 
 
+
     void Start()
     {
         score1Text.text=score1.ToString();
@@ -20,11 +21,11 @@ public class onlineScoreUpdate : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         
-        if(collision.collider.name == "Player2Wall")
+        if(collision.collider.name == "Player2Wall" && PhotonNetwork.CurrentRoom.PlayerCount == 2)
         { 
             UpdateScore1(); 
         }
-        if(collision.collider.name == "Player1Wall")
+        if(collision.collider.name == "Player1Wall" && PhotonNetwork.CurrentRoom.PlayerCount == 2)
         {     
             UpdateScore2();       
         }
