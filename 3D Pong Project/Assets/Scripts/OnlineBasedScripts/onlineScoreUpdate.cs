@@ -37,14 +37,14 @@ public class onlineScoreUpdate : MonoBehaviour
     {
         score1 ++;
         score1Text.text = score1.ToString();
-        FindObjectOfType<ballMovement>().initializeMovement();
+        FindObjectOfType<onlineballMovement>().initializeMovement();
         FindObjectOfType<stripMovement>().resetPosition();   
     }
     void UpdateScore2()
     {
         score2 ++ ;
         score2Text.text =score2.ToString();
-        FindObjectOfType<ballMovement>().initializeMovement();
+        FindObjectOfType<onlineballMovement>().initializeMovement();
         FindObjectOfType<stripMovement>().resetPosition();   
     }
 
