@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class levelTransition : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class levelTransition : MonoBehaviour
     public void loadMultiplayer()
     {
         SceneManager.LoadScene("Loading");
+    }
+
+    public void leaveMultiplayer()
+    {
+        PhotonNetwork.Disconnect();
+        SceneManager.LoadScene("Menu");
     }
 
 }
