@@ -11,7 +11,7 @@ public class playerSpawner : MonoBehaviour
     void Start()
     {
         
-        if (PhotonNetwork.CurrentRoom.PlayerCount == 1)
+        if (PhotonNetwork.CurrentRoom.PlayerCount == 0)
             PhotonNetwork.Instantiate(player1.name,new Vector3(0,10,-8.5f),Quaternion.identity);
         else
             PhotonNetwork.Instantiate(player2.name,new Vector3(0,10,8.5f), Quaternion.identity);
