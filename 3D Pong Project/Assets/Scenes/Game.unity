@@ -4729,6 +4729,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 624248444421825291, guid: c59f007abcc4982488464a69998a5bc6, type: 3}
+      propertyPath: antialiasingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 624248444421825291, guid: c59f007abcc4982488464a69998a5bc6, type: 3}
       propertyPath: fastApproximateAntialiasing.fastMode
       value: 1
       objectReference: {fileID: 0}
