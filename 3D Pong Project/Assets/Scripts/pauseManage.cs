@@ -15,6 +15,7 @@ public class pauseManage : MonoBehaviour
 
     void Start()
     {
+        Application.targetFrameRate = 60;
         ResumeGame();
     }
     void Update()

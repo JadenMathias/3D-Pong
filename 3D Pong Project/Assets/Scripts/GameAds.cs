@@ -16,7 +16,7 @@ public class GameAds : MonoBehaviour
 
 		MobileAds.Initialize(initStatus => { });
 
-		RequestBannerAd ();
+		RequestBannerAd();
 	}
 
 
